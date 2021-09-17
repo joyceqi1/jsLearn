@@ -1,0 +1,20 @@
+<button onclick="click1()">点击</button>
+<script>
+    // 防抖
+    let timer;
+    function click1() {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            console.log("触发点击事件")
+        }, 500)
+    }
+// 节流
+    function click2() {
+        if(flag){
+            setTimeout(()=>{
+            console.log("触发点击事件");
+            flag = 0;
+        }, 500)
+        }
+    }
+</script>
